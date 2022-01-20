@@ -1,0 +1,35 @@
+// html structure
+
+/* button #hamberger-menu
+        nav #sidebar-menu
+            h3
+            ul > li > a
+*/
+
+$btn-size: 2rem;
+
+#hamburger-menu {
+    height: $btn-size;
+    width: $btn-size;
+    display: none;
+    position: fixed;
+
+    @include for-phone-only{
+        display: inline;
+    }
+
+    #sidebar-menu {
+        position: fixed;
+        left: -50rem; //change property
+        width: 10rem;
+        height: 100%;
+        transition: 0.2s;
+        box-sizing: border-box;
+    }
+
+    &:focus #sidebar-menu,
+    &:focus-within #sidebar-menu{
+        visibility: visible;
+        left: 0; //change property
+    }
+}

@@ -1,0 +1,5 @@
+.grid-box{
+    display: grid;
+    grid-template-columns: repeat(11, auto);
+    grid-auto-rows: auto;
+}
